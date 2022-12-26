@@ -1,0 +1,22 @@
+server:
+  port: 8080
+base:
+  uri: /server
+spring-doc:
+  swagger-ui:
+    path: /swagger-ui.html
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: database
+    url: jdbc:mysql://localhost:3306/serverdb?useSSL=false&allowMultiQueries=true&serverTimezone=UTC
+    username: root
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
